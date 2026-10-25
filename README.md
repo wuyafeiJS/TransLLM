@@ -1,11 +1,22 @@
+<div align="center">
+
 # 🌐 TransLLM
 
-> **100% Client-Direct, Zero-Tracking, Bring-Your-Own-Key (BYOK) AI Web Translator.**  
-> Powered by DeepSeek, OpenAI, Local Ollama, and any OpenAI-compatible LLM.
+**100% Client-Direct, Zero-Tracking, Bring-Your-Own-Key (BYOK) AI Web Translator.**  
+*Powered by DeepSeek, OpenAI, Local Ollama, and any OpenAI-compatible LLM.*
 
+<p align="center">
+  <a href="README.md"><b>English</b></a> |
+  <a href="README_zh.md"><b>简体中文</b></a>
+</p>
+
+[![English](https://img.shields.io/badge/Language-English-blue.svg)](README.md)
+[![简体中文](https://img.shields.io/badge/语言-简体中文-red.svg)](README_zh.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Manifest V3](https://img.shields.io/badge/Chrome-Manifest_V3-green.svg)]()
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
+[![Manifest V3](https://img.shields.io/badge/Chrome-Manifest_V3-green.svg)](https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/wuyafeiJS/TransLLM/pulls)
+
+</div>
 
 ---
 
@@ -39,11 +50,11 @@ Most commercial AI translation extensions have moved to closed-source models wit
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/your-username/TransLLM.git
+   git clone https://github.com/wuyafeiJS/TransLLM.git
    ```
 2. Open Chrome or Edge and navigate to `chrome://extensions/` or `edge://extensions/`.
 3. Enable **"Developer mode"** in the top right corner.
-4. Click **"Load unpacked"** and select the `TransLLM` folder.
+4. Click **"Load unpacked"** and select the `TransLLM` directory.
 5. Click the TransLLM icon in the browser toolbar, input your **DeepSeek API Key** or **Ollama Base URL**, and click **Save & Test Connection**.
 
 ---
