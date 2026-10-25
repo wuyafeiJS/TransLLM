@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TransLLM Settings</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+      --primary-hover: #0ea5e9;
+    }
+    body {
+      margin: 0;
+      padding: 16px;
+      width: 320px;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 13px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .tag {
+      font-size: 10px;
+      background: #0369a1;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .field {
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text-muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    input, select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 7px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      font-size: 12px;
+      outline: none;
+    }
+    input:focus, select:focus {
+      border-color: var(--primary);
+    }
+    .btn {
+      width: 100%;
+      padding: 8px;
+      background: var(--primary);
+      color: #0f172a;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 6px;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: var(--primary-hover); }
+    .btn-secondary {
+      background: #334155;
+      color: #f8fafc;
+      margin-top: 6px;
+    }
+    .btn-secondary:hover { background: #475569; }
+    .status {
+      margin-top: 8px;
+      font-size: 11px;
+      text-align: center;
+      min-height: 16px;
+    }
+    .status.success { color: #4ade80; }
+    .status.error { color: #f87171; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">TransLLM</div>
+    <div class="tag">BYOK • 100% Private</div>
+  </div>
+
+  <div class="field">
+    <label>Provider Preset</label>
+    <select id="preset">
+      <option value="deepseek">DeepSeek (Recommended)</option>
+      <option value="openai">OpenAI (GPT-4o / mini)</option>
+      <option value="ollama">Ollama (Local / Offline)</option>
+      <option value="custom">Custom Endpoint</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>API Base URL</label>
+    <input type="text" id="baseUrl" placeholder="https://api.deepseek.com/v1" />
+  </div>
+
+  <div class="field">
+    <label>API Key</label>
+    <input type="password" id="apiKey" placeholder="sk-..." />
+  </div>
+
+  <div class="field">
+    <label>Model Name</label>
+    <input type="text" id="model" placeholder="deepseek-chat" />
+  </div>
+
+  <div class="field">
+    <label>Target Language</label>
+    <select id="targetLanguage">
+      <option value="zh-CN">简体中文 (Simplified Chinese)</option>
+      <option value="en">English</option>
+      <option value="ja">日本語 (Japanese)</option>
+      <option value="zh-TW">繁體中文 (Traditional Chinese)</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+    </select>
+  </div>
+
+  <button class="btn" id="saveBtn">Save & Test Connection</button>
+  <button class="btn btn-secondary" id="pageTranslateBtn">🌐 Translate Entire Webpage</button>
+  <div class="status" id="status"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>
